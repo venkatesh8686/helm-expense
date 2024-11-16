@@ -2,4 +2,3 @@ apiVersion: v1
 name: mysql
 version: 0.0.1
 description: This chart is managing mysql version
-s
