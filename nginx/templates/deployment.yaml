@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+    tier: frontend
+spec:
+  # modify replicas according to your case
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      tier: frontend
+      app: nginx
+  template:
+    metadata:
+      labels:
+        tier: frontend
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        # This is called place holder
+        image: nginx:{{ .Values.deployment.imageVersion }}
