@@ -23,12 +23,12 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: venki8686/frontend:{{ .Values.deployment.imageVersion }}
-        resources: 
-          requests: 
+        image: joindevops/frontend:{{ .Values.deployment.imageVersion }}
+        resources:
+          requests:
             cpu: 100m
             memory: 128Mi
-          # limits is greter than or equal to request
+          # limits is greater than or equal to requests
           limits:
             cpu: 100m
-            memory: 128Mi       
+            memory: 128Mi
