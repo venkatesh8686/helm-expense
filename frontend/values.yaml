@@ -2,4 +2,4 @@ deployment:
   imageVersion: v1
   replicas: 2
 hpa:
-  cpuUtilization: 20
+  cpuUtilization: 15
